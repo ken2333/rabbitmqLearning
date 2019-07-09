@@ -20,12 +20,7 @@ public class Productor1 {
 
     public static void main(String[] args) {
 
-        ConnectionFactory connectionFactory = new ConnectionFactory();
-        connectionFactory.setUsername("guest");
-        connectionFactory.setPassword("guest");
-     //   connectionFactory.setVirtualHost("");
-        connectionFactory.setHost("192.168.100.2");
-        connectionFactory.setPort(5672);
+        ConnectionFactory connectionFactory = ConnectionUnit.getConnectionFactory();
         try {
             /*
              * 声明（创建）队列
